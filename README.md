@@ -6,3 +6,9 @@ ui test enfocarse en a "end to end", work flows, flujos completos de la interaci
 progrmar tods los dias 
 tener claro quen entradas esntra recibiendo y que es lo que tines validar de output y recien que es lo que vas automatizar 
 TDD tes driven development. bateria de test Write a test watch it fail, write just enought code to pass the test, improve code without changing its behavior
+
+video 2
+https://formy-project.herokuapp.com/
+f12 
+dock to right 
+Ctrl+f para buscar
