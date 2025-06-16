@@ -14,6 +14,7 @@ dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.32.0'
 
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    // esta dependecia ayuda a comunicar desde mi srip java hacia mi browser
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '6.1.0'
 
 
