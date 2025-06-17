@@ -12,3 +12,23 @@ https://formy-project.herokuapp.com/
 f12 
 dock to right 
 Ctrl+f para buscar
+
+CSS Selector
+
+#first-name
+input[placeholder="Enter first name"]
+.form-group #first-name (space is descendant)
+.form-group > div > #first-name (> is child)
+strong + #first-name (+ is following sibling)
+ Nota: CSS no tiene parent, ancestor o preceding.
+
+XPath
+//*[@id="first-name"]
+//input[@id="first-name"]
+//input[@placeholder="Enter first name"]
+//label[@for="first-name"]/parent::strong/following-sibling::input
+/html/body/div/form/div/div[1]/input
+Problemas:
+Uso de índices [1] puede ser frágil.
+Evitar dependencias en atributos multilanguage como text, placeholder y title.
+
