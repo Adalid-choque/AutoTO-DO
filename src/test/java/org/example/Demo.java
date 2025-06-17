@@ -56,5 +56,14 @@ public class Demo {
         // siempre tratar de usar estos metodos
         // By.cssSelector();
         // By.xpath();
+
+
+    }
+    @Test
+    public void demoClassroom(){
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(15));
+        driver.get("https://canvas.instructure.com");
     }
 }
