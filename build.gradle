@@ -10,6 +10,19 @@ repositories {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.17.0'
+    
+    // Dependencia específica para Chrome - usar la versión más cercana disponible
+    implementation 'org.seleniumhq.selenium:selenium-devtools-v121:4.17.0'
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    // esta dependecia ayuda a comunicar desde mi srip java hacia mi browser
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '6.1.0'
+
+    // Implementación de SLF4J para resolver la advertencia de "No SLF4J providers"
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
