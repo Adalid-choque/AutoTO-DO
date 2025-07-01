@@ -16,6 +16,7 @@ repositories {
 }
 
 dependencies {
+
     // Selenium WebDriver
     implementation 'org.seleniumhq.selenium:selenium-java:4.17.0'
     implementation 'org.seleniumhq.selenium:selenium-devtools-v121:4.17.0'
@@ -27,6 +28,8 @@ dependencies {
     implementation 'ch.qos.logback:logback-classic:1.5.13'
 
     // Testing
+
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
