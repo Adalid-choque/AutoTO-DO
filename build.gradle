@@ -5,15 +5,35 @@ plugins {
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21) // Usando Java 21 que está instalado
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
+
+    // Selenium WebDriver
+    implementation 'org.seleniumhq.selenium:selenium-java:4.17.0'
+    implementation 'org.seleniumhq.selenium:selenium-devtools-v121:4.17.0'
+
+    // WebDriverManager
+    implementation 'io.github.bonigarcia:webdrivermanager:6.1.0'
+
+    // Logging
+    implementation 'ch.qos.logback:logback-classic:1.5.13'
+
+    // Testing
+
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
-test {
+tasks.withType(Test).configureEach {
     useJUnitPlatform()
 }
