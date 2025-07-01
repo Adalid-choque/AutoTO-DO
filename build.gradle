@@ -5,28 +5,32 @@ plugins {
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21) // Usando Java 21 que está instalado
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.17.0'
-    
-    // Dependencia específica para Chrome - usar la versión más cercana disponible
+    // Selenium WebDriver
+    implementation 'org.seleniumhq.selenium:selenium-java:4.17.0'
     implementation 'org.seleniumhq.selenium:selenium-devtools-v121:4.17.0'
 
-    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    // esta dependecia ayuda a comunicar desde mi srip java hacia mi browser
-    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '6.1.0'
+    // WebDriverManager
+    implementation 'io.github.bonigarcia:webdrivermanager:6.1.0'
 
-    // Implementación de SLF4J para resolver la advertencia de "No SLF4J providers"
-    implementation 'ch.qos.logback:logback-classic:1.4.14'
+    // Logging
+    implementation 'ch.qos.logback:logback-classic:1.5.13'
 
+    // Testing
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
-test {
+tasks.withType(Test).configureEach {
     useJUnitPlatform()
 }
